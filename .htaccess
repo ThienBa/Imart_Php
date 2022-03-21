@@ -1,0 +1,33 @@
+RewriteEngine On
+
+RewriteRule ^([a-zA-Z0-9_-]+).html$ index.php?mod=home
+
+RewriteRule ^san-pham/([a-zA-Z0-9_-]+).html$ index.php?mod=product&action=main
+
+RewriteRule ^bai-viet/([a-zA-Z0-9_-]+).html$ index.php?mod=post&action=main
+
+RewriteRule ^trang/([a-zA-Z0-9_-]+)-([0-9]+).html$ index.php?mod=page&action=detail&id=$2
+
+RewriteRule ^chi-tiet-san-pham/([a-zA-Z0-9_-]+)-([0-9]+).html$ index.php?mod=product&action=detail&id=$2
+
+RewriteRule ^chi-tiet-bai-viet/([a-zA-Z0-9_-]+)-([0-9]+).html$ index.php?mod=post&action=detail&id=$2
+
+RewriteRule ^gio-hang/([a-zA-Z0-9_-]+).html$ index.php?mod=cart&action=show
+
+RewriteRule ^them-gio-hang/([a-zA-Z0-9_-]+)-([0-9]+).html$ index.php?mod=cart&action=add_cart&id=$2
+
+RewriteRule ^thanh-toan/([a-zA-Z0-9_-]+).html$ index.php?mod=cart&action=checkout
+
+RewriteRule ^thanh-toan-mua-ngay/([a-zA-Z0-9_-]+).html$ index.php?mod=buy_now&action=checkout
+    
+RewriteRule ^mua-ngay/([a-zA-Z0-9_-]+)-([0-9]+).html$ index.php?mod=buy_now&action=index&id=$2
+
+RewriteRule ^san-pham-theo-danh-muc/([a-zA-Z0-9_-]+).html$ index.php?mod=product&action=$1
+
+RewriteRule ^xoa-san-pham/([a-zA-Z0-9_-]+)-([0-9]+).html$ index.php?mod=cart&action=delete_cart&id=$2
+
+RewriteRule ^xoa-san-pham/([a-zA-Z0-9_-]+).html$ index.php?mod=cart&action=delete_all_cart
+
+RewriteRule ^loi-duong-dan/error.html$ index.php?mod=error&controller=index&action=index
+
+ErrorDocument 404  http://localhost:8080/Unitop.vn/back-end/project/ismart.com/loi-duong-dan/error.html
