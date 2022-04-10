@@ -47,7 +47,6 @@ function list_orderAction()
 
 function detail_orderAction()
 {
-    global $success;
     $id = (int)$_GET['id'];
     $detail_order = get_detail_order_by_id($id);
 
@@ -65,7 +64,7 @@ function detail_orderAction()
 
 function update_orderAction()
 {
-    global $error, $success;
+    global $error;
     $id = (int)$_GET['id'];
     $order = get_order_by_id($id);
 
@@ -139,7 +138,7 @@ function list_customerAction()
 
 function update_customerAction()
 {
-    global $error, $success;
+    global $error;
     $customer_id = (int)$_GET['id'];
     $customer = get_info_customer_by_id($customer_id);
     if (isset($_POST['btn_update_customer'])) {

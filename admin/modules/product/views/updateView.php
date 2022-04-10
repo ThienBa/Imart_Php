@@ -8,7 +8,7 @@
         <div id="content" class="fl-right">
             <div class="section" id="title-page">
                 <div class="clearfix">
-                    <h3 id="index" class="fl-left">Thêm sản phẩm</h3>
+                    <h3 id="index" class="fl-left">Chỉnh sửa sản phẩm</h3>
                 </div>
             </div>
             <div class="section" id="detail-page">
@@ -67,7 +67,7 @@
                             <option <?php if($get_product['child_id'] == 8) echo "selected = 'selected'"?>  value="8">Msi</option>
                         </select>
                         <span class="error"><?php echo form_error('child_id'); ?></span>
-                        <button type="submit" name="btn_add_product" id="btn_add_product">Thêm mới</button>
+                        <button type="submit" name="btn_add_product" id="btn_add_product">Cập nhật</button>
                     </form>
                 </div>
             </div>

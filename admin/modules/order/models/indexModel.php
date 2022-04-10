@@ -4,11 +4,11 @@
     }
 
     function search_action($status){
-        return db_fetch_array("SELECT * FROM `tbl_order` LEFT JOIN `tbl_customer` ON `tbl_order`.`id` = `tbl_customer`.`id` WHERE `order_status` LIKE {$status}");
+        return db_fetch_array("SELECT * FROM `tbl_order` LEFT JOIN `tbl_customer` ON `tbl_order`.`id` = `tbl_customer`.`order_id` WHERE `order_status` = {$status}");
     }
 
     function search_order($value){
-        return db_fetch_array("SELECT * FROM `tbl_order` RIGHT JOIN `tbl_customer` ON `tbl_order`.`id` = `tbl_customer`.`id` WHERE `name` LIKE '%{$value}%' OR `order_qty` LIKE '%{$value}%' OR `total_price` LIKE '%{$value}%'");
+        return db_fetch_array("SELECT * FROM `tbl_order` RIGHT JOIN `tbl_customer` ON `tbl_order`.`id` = `tbl_customer`.`order_id` WHERE `name` LIKE '%{$value}%' OR `order_qty` LIKE '%{$value}%' OR `total_price` LIKE '%{$value}%'");
     }
 
     function get_detail_order_by_id($id){
@@ -46,4 +46,3 @@
     function delete_customer_by_id($id){
         return db_delete("tbl_customer", "`customer_id` = {$id}");
     }
-?>

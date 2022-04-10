@@ -55,8 +55,7 @@ global $error;
                             } ?>
                         </select>
                         <span class="error"><?php echo form_error('category'); ?></span>
-                        <button type="submit" name="btn_add_post" id="btn_add_post" value="Thêm bài viết">Cập
-                            nhật</button>
+                        <button type="submit" name="btn_add_post" id="btn_add_post" value="Thêm bài viết">Thêm mới</button>
                     </form>
                 </div>
             </div>

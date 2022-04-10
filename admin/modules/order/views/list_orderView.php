@@ -205,7 +205,7 @@ global $num_page, $page, $result_search_status, $result_search, $start;
                                         <tr>
                                             <td><span class="thead-text">STT</span></td>
                                             <td><span class="thead-text">Mã đơn hàng</span></td>
-                                            <td><span class="thead-text">Họ và tên</span></td>
+                                            <td><span class="thead-text"></span></td>
                                             <td><span class="thead-text">Số lượng</span></td>
                                             <td><span class="thead-text">Tổng giá</span></td>
                                             <td><span class="thead-text">Trạng thái</span></td>
@@ -221,11 +221,8 @@ global $num_page, $page, $result_search_status, $result_search, $start;
                                         ?>
                                             <tr>
                                                 <td><span class="tbody-text"><?php echo $count; ?></h3></span>
-                                                <td><span class="tbody-text"><?php echo "ORDER#" . $status['order_id']; ?></h3></span>
+                                                <td><span class="tbody-text"><?php echo "ORDER#" . $status['id']; ?></h3></span>
                                                 <td>
-                                                    <div class="tb-title fl-left">
-                                                        <a href="<?php echo $status['url_update']; ?>" title=""><?php echo $status['name']; ?></a>
-                                                    </div>
                                                     <ul class="list-operation fl-right">
                                                         <li><a href="<?php echo $status['url_update']; ?>" title="Sửa" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                                         </li>
